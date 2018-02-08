@@ -14,7 +14,7 @@ public class Main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new EventsListener(), this);
 		
 		//Register Command Executors
-		this.getCommand("CoderDojo").setExecutor(new CoderDojoCommand());
+		this.getCommand("fly").setExecutor(new CoderDojoCommand());
     }
 
 }
