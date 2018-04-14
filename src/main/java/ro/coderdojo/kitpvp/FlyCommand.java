@@ -3,14 +3,14 @@ package ro.coderdojo.kitpvp;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player Player;
+import org.bukkit.entity.Player;
 
 
 public class FlyCommand implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
-		Player player = (Player) sender;
+		Player player = (Player) commandSender;
 		if (command.getName().equalsIgnoreCase("/fly")) {
 			if(args.length == 0) {
 			    player.setAllowFlight(!player.getAllowFlight());

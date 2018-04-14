@@ -11,7 +11,8 @@ public final class EventsListener implements Listener {
 
 	@EventHandler
 	public void onLogin(PlayerJoinEvent event) {
-		Player player = event.getPlayer();
-		player.sendMessage("Salut " + ChatColor.AQUA + player.getName() + ChatColor.WHITE + "! Felicitări pentru primul mod de Minecraft!");
+            
+		//Player player = event.getPlayer();
+		//player.sendMessage("Salut " + ChatColor.AQUA + player.getName() + ChatColor.WHITE + "! Felicitări pentru primul mod de Minecraft!");
 	}
 }
