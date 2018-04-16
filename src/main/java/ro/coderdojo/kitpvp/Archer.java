@@ -41,7 +41,12 @@ public class Archer implements CommandExecutor {
         Bow.addEnchantment(Enchantment.ARROW_DAMAGE, 3);
         
         Player p = (Player) commandSender;
-        p.getPlayer().getInventory().addItem(Bow, Arrow, IChest , IBoot , ILegs , IHelmet);        
+        p.getPlayer().getInventory().addItem(Bow, Arrow);
+        p.getPlayer().getInventory().setChestplate(IChest);
+        p.getPlayer().getInventory().setLeggings(ILegs);
+        p.getPlayer().getInventory().setBoots(IBoot);
+        p.getPlayer().getInventory().setHelmet(IHelmet);
+        
         return false;
     }
     

@@ -60,7 +60,7 @@
                 <artifactId>maven-antrun-plugin</artifactId>
                 <configuration>
                     <tasks>
-                        <copy file="target/KitPvP-1.0-SNAPSHOT.jar" todir="c:\CoderDojo\spigot/plugins"/>
+                        <copy file="target/KitPvP-1.0-SNAPSHOT.jar" todir="E:\server\plugins"/>
                     </tasks>
                 </configuration>
                 <executions>

@@ -11,11 +11,13 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
 		//Register Event Listeners
+                
 		getServer().getPluginManager().registerEvents(new EventsListener(), this);
 		
 		//Register Command Executors
 		this.getCommand("fly").setExecutor(new FlyCommand());
                 this.getCommand("archer").setExecutor(new Archer()) ; 
+                this.getCommand("tank").setExecutor(new Tank());
     }
 
 }
