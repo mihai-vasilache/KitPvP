@@ -16,7 +16,7 @@ public class Main extends JavaPlugin {
 		
 		//Register Command Executors
 		this.getCommand("fly").setExecutor(new FlyCommand());
-                this.getCommand("archer").setExecutor(new Archer()) ; 
+                this . getCommand("kit1").setExecutor(new Archer() );
                 this.getCommand("tank").setExecutor(new Tank());
     }
 

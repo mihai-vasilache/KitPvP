@@ -9,10 +9,12 @@ commands:
     permission: <plugin name>.basic
     permission-message: You don't have <permission>
     
-    archer:
-        description : archer kit
-        usage: /kit1
+  kit1:
+    description: archer kit cmd
+    usage: /kit1
+    permission: <plugin name>.basic
+    permission-message: You don't have <permission>
+  tank:
+    description: tank kit command
+    usage: /kit2
         
-    tank:
-        description : tank kit
-        usage : /kit2

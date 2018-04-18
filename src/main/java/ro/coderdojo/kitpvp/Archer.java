@@ -28,6 +28,7 @@ public class Archer implements CommandExecutor {
         ItemStack IBoot = new ItemStack(Material.IRON_BOOTS, 1);
         ItemStack ILegs = new ItemStack(Material.IRON_LEGGINGS, 1);
         ItemStack IHelmet = new ItemStack(Material.IRON_HELMET, 1);
+        ItemStack Steak  =new  ItemStack (Material.COOKED_BEEF , 64);
         IHelmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         IChest.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
         ILegs.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
@@ -41,7 +42,8 @@ public class Archer implements CommandExecutor {
         Bow.addEnchantment(Enchantment.ARROW_DAMAGE, 3);
         
         Player p = (Player) commandSender;
-        p.getPlayer().getInventory().addItem(Bow, Arrow);
+        p.getPlayer().getInventory().clear();
+        p.getPlayer().getInventory().addItem(Bow, Arrow, Steak);
         p.getPlayer().getInventory().setChestplate(IChest);
         p.getPlayer().getInventory().setLeggings(ILegs);
         p.getPlayer().getInventory().setBoots(IBoot);
