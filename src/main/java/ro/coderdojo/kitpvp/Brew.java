@@ -25,7 +25,7 @@ public class Brew implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         Player p = (Player) sender;
         ItemStack BlazePow = new ItemStack(Material.BLAZE_POWDER , 64);
-        ItemStack Water = new ItemStack(Material.POTION ,1  , (short) 16389);
+        ItemStack Water = new ItemStack(Material.POTION ,1  , (short) 16489);
         Inventory brewer = Bukkit.getServer().createInventory(p, InventoryType.BREWING, "Don't close");
         brewer.setItem(4, BlazePow );
         brewer.setItem(0 , Water);

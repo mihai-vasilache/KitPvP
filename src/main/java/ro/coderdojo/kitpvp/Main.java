@@ -23,6 +23,7 @@ public class Main extends JavaPlugin {
                 this.getCommand("shop").setExecutor(new Shop());
                 this.getCommand("brew").setExecutor(new Brew());
                 this.getCommand("add10Money").setExecutor(new AddMoney());
+                
     }
 
 }

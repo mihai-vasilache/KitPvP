@@ -35,3 +35,7 @@ commands:
   add10Money:
     description : add 10 money to your bal
     usage : /add10Money
+  
+  meta:
+    description : getMeta
+    usage : /meta
