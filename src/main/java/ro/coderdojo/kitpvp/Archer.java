@@ -29,17 +29,17 @@ public class Archer implements CommandExecutor {
         ItemStack ILegs = new ItemStack(Material.IRON_LEGGINGS, 1);
         ItemStack IHelmet = new ItemStack(Material.IRON_HELMET, 1);
         ItemStack Steak  =new  ItemStack (Material.COOKED_BEEF , 64);
-        IHelmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
-        IChest.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
-        ILegs.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
-        IBoot.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
+        IHelmet.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
+        IChest.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
+        ILegs.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
+        IBoot.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
         IHelmet.addUnsafeEnchantment(Enchantment.DURABILITY , 100 );
         IChest.addUnsafeEnchantment(Enchantment.DURABILITY,  100);
         ILegs.addUnsafeEnchantment(Enchantment.DURABILITY, 100);
         IBoot.addUnsafeEnchantment(Enchantment.DURABILITY, 100);
         Bow.addUnsafeEnchantment(Enchantment.DURABILITY, 100);
         Bow.addEnchantment(Enchantment.ARROW_INFINITE, 1);
-        Bow.addEnchantment(Enchantment.ARROW_DAMAGE, 3);
+        Bow.addEnchantment(Enchantment.ARROW_DAMAGE, 4);
         
         Player p = (Player) commandSender;
         p.getPlayer().getInventory().clear();
