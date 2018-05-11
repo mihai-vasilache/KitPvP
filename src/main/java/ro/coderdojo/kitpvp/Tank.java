@@ -2,6 +2,7 @@ package ro.coderdojo.kitpvp;
 
 
 import org.bukkit.Material;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -45,7 +46,8 @@ public class Tank implements CommandExecutor {
         p.getPlayer().getInventory().setChestplate(DChest);
         p.getPlayer().getInventory().setLeggings(DLegs);
         p.getPlayer().getInventory().setBoots(DBoot);
-        
+        p.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(25);
+
     
     
     return false;

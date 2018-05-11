@@ -59,11 +59,11 @@ public final class EventsListener implements Listener {
                     else{
                     p.closeInventory();
                     p.sendMessage("NO MONEY!!");
-                    }
-                    
                 }
-
             }
         }
+
     }
+}
+    
 }

@@ -32,6 +32,8 @@ public class Brew implements CommandExecutor {
         brewer.setItem(1 , Water);
         brewer.setItem(2 , Water);
         p.openInventory(brewer);
+        p.closeInventory();
+        p.sendMessage("WIP");
         return false;
     }
 
