@@ -24,11 +24,7 @@ public class Spawn implements CommandExecutor {
         l.setX(214);
         l.setY(157);
         l.setZ(248);
-        
-        p.getPlayer().getLocation().setX(214);
-        p.getPlayer().getLocation().setY(157);
-        p.getPlayer().getLocation().setZ(248);
-        
+        p.getPlayer().teleport(l);
         return false;
     }
 

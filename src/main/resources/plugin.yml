@@ -12,8 +12,6 @@ commands:
   kit1:
     description: archer kit cmd
     usage: /kit1
-    permission: <plugin name>.basic
-    permission-message: You don't have <permission>
   kit2:
     description: tank kit command
     usage: /kit2
@@ -36,6 +34,10 @@ commands:
     description : add 10 money to your bal
     usage : /add10Money
   
-  meta:
-    description : getMeta
-    usage : /meta
+  kit4:
+    description : Scout / tank killer kit 
+    usage : /kit4
+  
+  spawn:
+    description: Spawn cmd
+    usage: /spawn

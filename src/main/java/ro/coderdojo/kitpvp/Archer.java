@@ -6,6 +6,7 @@
 package ro.coderdojo.kitpvp;
 
 import org.bukkit.Material;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -48,6 +49,7 @@ public class Archer implements CommandExecutor {
         p.getPlayer().getInventory().setLeggings(ILegs);
         p.getPlayer().getInventory().setBoots(IBoot);
         p.getPlayer().getInventory().setHelmet(IHelmet);
+        p.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(20);
         
         return false;
     }
