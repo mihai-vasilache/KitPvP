@@ -2,6 +2,7 @@ package ro.coderdojo.kitpvp;
 
 import java.util.HashMap;
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -14,20 +15,32 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerItemDamageEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 public final class EventsListener implements Listener {
     
     public static HashMap<String, Integer> bal = new HashMap();
+<<<<<<< Updated upstream
     
+=======
+    public static Boolean b = false;
+
+>>>>>>> Stashed changes
     @EventHandler
     public void onLogin(PlayerJoinEvent event) {
         
         Player p = event.getPlayer();
         String name = p.getName();
         bal.put(name, 10);
+<<<<<<< Updated upstream
         
+=======
+        p.setGameMode(GameMode.ADVENTURE);
+
+>>>>>>> Stashed changes
     }
     
     @EventHandler
@@ -50,6 +63,7 @@ public final class EventsListener implements Listener {
     
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
+<<<<<<< Updated upstream
         Player p = (Player) event.getEntity();
         String killerName = p.getPlayer().getKiller().getName();
         String killedName = p.getPlayer().getName();
@@ -57,6 +71,47 @@ public final class EventsListener implements Listener {
         bal.put(killedName, bal.get(killedName) - 2);
         p.getPlayer().getInventory().clear();
         
+=======
+        
+            Player p = event.getEntity();
+            String killerName = p.getPlayer().getKiller().getName();
+            String killedName = p.getPlayer().getName();
+            bal.put(killerName, bal.get(killerName) + 5);
+            bal.put(killedName, bal.get(killedName) - 2);
+
+        
+
+    }
+
+    @EventHandler
+    public void onPlayerRespawn(PlayerRespawnEvent e) {
+    
+        
+        if(b== true)
+        {
+        b = false;
+        }   
+    
+    }
+
+    @EventHandler
+    public void onPlayerMove(PlayerMoveEvent e) {
+        Player p = e.getPlayer();
+
+        if (b == false && p.getPlayer().getLocation().getY() >= 155) {
+            p.getPlayer().setInvulnerable(true);
+            b = true;
+        }
+        if (b == true && p.getPlayer().getLocation().getY() <= 78) {
+            p.getPlayer().setInvulnerable(false);
+
+        }
+        if(b==false && p.getPlayer().getLocation().getY() <= 55)
+        {
+         p.getPlayer().setInvulnerable(true);
+         b=true;
+        }
+>>>>>>> Stashed changes
     }
     
     @EventHandler
@@ -76,7 +131,11 @@ public final class EventsListener implements Listener {
                 if (e.getCurrentItem().getType().equals(Material.RAW_BEEF)) {
                     e.setCancelled(true);
                     if (bal.get(p.getPlayer().getName()) >= 50) {
+<<<<<<< Updated upstream
                         
+=======
+
+>>>>>>> Stashed changes
                         bal.put(p.getPlayer().getName(), bal.get(p.getPlayer().getName()) - 50);
                         p.getPlayer().getInventory().addItem(SplashStrenght);
                     } else {
@@ -85,6 +144,7 @@ public final class EventsListener implements Listener {
                     }
                 }
             }
+<<<<<<< Updated upstream
             
         }
     }
@@ -94,4 +154,10 @@ public final class EventsListener implements Listener {
     
     }*/
     
+=======
+
+        }
+    }
+
+>>>>>>> Stashed changes
 }
