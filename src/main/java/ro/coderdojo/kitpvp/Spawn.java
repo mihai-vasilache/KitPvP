@@ -23,20 +23,14 @@ public class Spawn implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender cs, Command cmnd, String string, String[] strings) {
         Player p = (Player) cs;
-<<<<<<< Updated upstream
-        Location l = null;
-        l.setX(214);
-        l.setY(157);
-        l.setZ(248);
-        p.getPlayer().teleport(l);
-=======
+
         World world = Bukkit.getServer().createWorld(new WorldCreator("world"));
 
         Location l = new Location(world, 214, 157, 248);
         p.getPlayer().teleport(l);
         p.getPlayer().setInvulnerable(true);
         EventsListener.b = false;
->>>>>>> Stashed changes
+
         return false;
     }
 
