@@ -7,11 +7,11 @@ import org.bukkit.entity.Player;
 
 
 public class FlyCommand implements CommandExecutor {
-
+Boolean b = false;
 	@Override
 	public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
 		Player player = (Player) commandSender;
-		if (command.getName().equalsIgnoreCase("/fly")) {
+		/*if (command.getName().equalsIgnoreCase("/fly")) {
 			if(args.length == 0) {
 			    player.setAllowFlight(!player.getAllowFlight());
 			} else if(args.length == 1) {
@@ -27,6 +27,14 @@ public class FlyCommand implements CommandExecutor {
 				}
 			}
 			player.sendMessage("Fly has been "+(player.getAllowFlight() ? "enabled" : "disabled"));
+		}*/
+		if(b==false){
+		player.setAllowFlight(true);
+			b= true;
+		}
+		if ( b==true ){
+		player.setAllowFlight(false);
+			b = false;
 		}
 		return false;
 	}
